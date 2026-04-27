@@ -279,17 +279,18 @@
     </div>
 
     <script>
-      const params = new URLSearchParams(window.location.search);
+const pathParts = window.location.pathname.split("/");
 
-      const pa = params.get("pa");
-      const am = params.get("am");
-      const tid = params.get("tid") || Date.now();
+const amount = pathParts[2];
+const tid = pathParts[3];
 
-      const upiLink = `upi://pay?pa=${pa}&pn=NHCLC&am=${am}&cu=INR&tid=${tid}`;
+const upiLink =
+`upi://pay?pa=gpay-12195080666@okbizaxis&pn=NHCLC&am=${amount}&cu=INR&tid=${tid}`;
 
-      setTimeout(() => {
-        window.location.href = upiLink;
-      }, 3000);
+setTimeout(() => {
+    window.location.href = upiLink;
+}, 3000);
+</script>
     </script>
   </body>
 </html>
