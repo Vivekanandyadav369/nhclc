@@ -291,14 +291,15 @@
       try {
         const decoded = decodeData(encodedData);
 
-        const [amount, tid] = decoded.split(":");
+        const [amount, tid, note] = decoded.split(":");
 
         const upiLink =
           `upi://pay?pa=gpay-12195080666@okbizaxis` +
           `&pn=NHCLC` +
           `&am=${amount}` +
           `&cu=INR` +
-          `&tid=${tid}`;
+          `&tid=${tid}` +
+          `&tn=${encodeURIComponent(note)}`;
 
         setTimeout(() => {
           window.location.href = upiLink;
