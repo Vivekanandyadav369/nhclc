@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/pay.js": {
+      "runtime": "@vercel/node"
+    }
+  }
+}
