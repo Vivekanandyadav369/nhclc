@@ -1,7 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/pay/:amount/:tid",
+      "source": "/pay/:code",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/",
       "destination": "/index.html"
     }
   ]
