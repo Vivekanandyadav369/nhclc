@@ -279,18 +279,16 @@
     </div>
 
     <script>
-const pathParts = window.location.pathname.split("/");
+      const pathParts = window.location.pathname.split("/");
 
-const amount = pathParts[2];
-const tid = pathParts[3];
+      const amount = pathParts[2];
+      const tid = pathParts[3];
 
-const upiLink =
-`upi://pay?pa=gpay-12195080666@okbizaxis&pn=NHCLC&am=${amount}&cu=INR&tid=${tid}`;
+      const upiLink = `upi://pay?pa=gpay-12195080666@okbizaxis&pn=NHCLC&am=${amount}&cu=INR&tid=${tid}`;
 
-setTimeout(() => {
-    window.location.href = upiLink;
-}, 3000);
-</script>
+      setTimeout(() => {
+        window.location.href = upiLink;
+      }, 3000);
     </script>
   </body>
 </html>
