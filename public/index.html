@@ -291,8 +291,9 @@
       try {
         const decoded = JSON.parse(decodeData(encodedData));
 
+        // upi://pay?pa=adityaalok2004@okhdfcbank
         const upiLink =
-          `upi://pay?pa=adityaalok2004@okhdfcbank` +
+          `upi://pay?pa=gpay-11242211266@okbizaxis` +
           `&pn=${encodeURIComponent("NHCLC")}` +
           `&am=${decoded.am}` +
           `&cu=INR` +
