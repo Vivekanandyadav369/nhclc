@@ -289,17 +289,15 @@
       }
 
       try {
-        const decoded = decodeData(encodedData);
-
-        const [amount, tid, note] = decoded.split(":");
+        const decoded = JSON.parse(decodeData(encodedData));
 
         const upiLink =
           `upi://pay?pa=gpay-12195080666@okbizaxis` +
-          `&pn=NHCLC` +
-          `&am=${amount}` +
+          `&pn=${encodeURIComponent("NHCLC")}` +
+          `&am=${decoded.am}` +
           `&cu=INR` +
-          `&tid=${tid}` +
-          `&tn=${encodeURIComponent(note)}`;
+          `&tr=${decoded.tr}` +
+          `&tn=${encodeURIComponent(decoded.tn)}`;
 
         setTimeout(() => {
           window.location.href = upiLink;
