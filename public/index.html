@@ -392,11 +392,12 @@
           document.getElementById("amount").innerText = `₹${decoded.am}`;
 
           const upiLink =
-            `upi://pay?pa=gpay-11242211266@okbizaxis` +
-            `&pn=${encodeURIComponent("Aditya Alok NHCLC TARSARAI")}` +
+            `upi://pay?pa=adityaalok2004@okhdfcbank` +
+            `&pn=${encodeURIComponent(
+              "New Horizons Computer Learning Centre",
+            )}` +
             `&am=${decoded.am}` +
             `&cu=INR` +
-            `&mc=8299` +
             `&tn=${encodeURIComponent(decoded.tn)}`;
 
           document.getElementById("payBtn").addEventListener("click", () => {
