@@ -380,15 +380,6 @@
             return;
           }
 
-          // Expiry Check (30 min)
-          const now = Math.floor(Date.now() / 1000);
-
-          if (now - decoded.ts > 1800) {
-            document.body.innerHTML = "<h2>Payment Link Expired</h2>";
-
-            return;
-          }
-
           document.getElementById("amount").innerText = `₹${decoded.am}`;
 
           const upiLink =
